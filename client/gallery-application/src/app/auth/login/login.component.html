@@ -1,0 +1,25 @@
+<div class="uk-flex uk-flex-middle uk-flex-center uk-height-viewport" >  
+    <mat-card class="uk-width-1-3@m" style="-webkit-box-shadow: 0 0 10px rgb(180, 180, 180);
+    box-shadow: 0 0 10px rgb(180, 180, 180);">
+        <div class="uk-flex uk-flex-center uk-margin-medium-bottom">
+            <h3>LOGIN</h3>
+        </div>
+      <mat-card-content>
+        <mat-form-field class="uk-width-1-1">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="your email" value="">
+          </mat-form-field>
+          <mat-form-field class="uk-width-1-1">
+            <mat-label>Password</mat-label>
+            <input type="password" matInput placeholder="your password" value="">
+          </mat-form-field>
+          <div class="uk-flex uk-flex-right">
+              <div class="uk-width-expand">
+                <button mat-button routerLink="">Back</button>
+                <button mat-button routerLink="/home">Direct to Home</button>
+              </div>
+              <button mat-raised-button color="primary" routerLink="/admin">LOGIN</button>
+          </div>
+      </mat-card-content>
+    </mat-card>
+</div>
