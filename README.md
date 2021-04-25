@@ -2,10 +2,10 @@
 gallery application web based
 
 1. Technology stack
-    - backend:
+    - backend: express, mysql, sequelize, ejs, axios, bcryptjs, jsonwebtoken
         - api documentation
         - deployment link
-    - frontend:
+    - frontend: angular, angular material, uikit
         - deployment link
 
 2. Flowchart and user manual
