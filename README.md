@@ -9,7 +9,7 @@ gallery application web based
         - deployment link
 
 2. Flowchart and user manual
-    - [**flowchart**](./screenshoot/0. gallery-application-flowchart.png)
+    - [**flowchart**](./screenshoot)
     - usermanual
 
 3. Screenshoot
