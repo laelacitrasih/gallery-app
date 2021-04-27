@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './auth/login/login.component';
 import { HomeComponent } from './gallery/home/home.component';
+import { PhotoListComponent } from './gallery/photo-list/photo-list.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 
 const routes: Routes = [
@@ -12,6 +13,10 @@ const routes: Routes = [
   {
     path:'home',
     component: HomeComponent
+  },
+  {
+    path:'galleries/:albumId',
+    component: PhotoListComponent
   },
   {
     path:'',
