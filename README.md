@@ -10,3 +10,6 @@ gallery application web based
     - usermanual
 
 3. Screenshoot
+    - [**welcome-page**](./screenshoot/1.%20welcome-page.png)
+    - [**login-page**](./screenshoot/2.%20login-page.png)
+    - [**home-page**](./screenshoot/3.%20home-page.png)
