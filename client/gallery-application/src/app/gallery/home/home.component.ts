@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 import { ApiService } from 'src/app/services/api.service';
 import { PhotoAddUpdateComponent } from '../photo-add-update/photo-add-update.component';
 
@@ -15,7 +16,8 @@ export class HomeComponent implements OnInit {
 
   constructor(
     public api:ApiService,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    public router: Router
   ) { }
 
   ngOnInit(): void {
@@ -36,9 +38,16 @@ export class HomeComponent implements OnInit {
     })
     dialog.afterClosed().subscribe(res => {
       if (res){
-        if (idx===-1) this.photos.push(res)
+        if (idx===-1) {
+          console.log(data)
+          this.api.post('/galleries', data).subscribe(result => {
+            console.log(result)
+            
+          })
+        }
         else this.photos[idx] = res
         console.log(this.photos,'-----')
+        this.router.navigate['/galleries'+data.albumId]
       }
     })
   }

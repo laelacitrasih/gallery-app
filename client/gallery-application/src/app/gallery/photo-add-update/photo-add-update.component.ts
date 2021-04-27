@@ -19,8 +19,10 @@ export class PhotoAddUpdateComponent implements OnInit {
   }
 
   saveData(){
+    let path = '/galleries'+this.data.albumId
+    this.router.navigate[path]
     this.dialogRef.close(this.data)
-    this.router.navigate(['']);
+    
   }
 
 }

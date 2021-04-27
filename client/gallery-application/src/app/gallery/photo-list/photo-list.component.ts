@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ApiService } from 'src/app/services/api.service';
 import { Router } from '@angular/router';
+import { PhotoAddUpdateComponent } from '../photo-add-update/photo-add-update.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-photo-list',
@@ -16,7 +18,8 @@ export class PhotoListComponent implements OnInit {
   constructor(
     public api: ApiService,
     private route: ActivatedRoute,
-    public router: Router
+    public router: Router,
+    public dialog: MatDialog
   ) { }
 
   ngOnInit(): void {
@@ -46,8 +49,18 @@ export class PhotoListComponent implements OnInit {
     })
   }
 
-  updatePhoto(params){
-    
+  addPhoto(data, idx){
+    let dialog = this.dialog.open(PhotoAddUpdateComponent, {
+      width: '400px',
+      data: data
+    })
+    dialog.afterClosed().subscribe(res => {
+      if (res){
+        if (idx===-1) this.photos.push(res)
+        else this.photos[idx] = res
+        console.log(this.photos,'-----')
+      }
+    })
   }
 
 }

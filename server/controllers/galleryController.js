@@ -93,6 +93,7 @@ class GalleryController {
   static async createPhoto(req, res, next) {
     try {
       let { albumId, title, url, thumbnailUrl } = req.body
+      console.log(req.body,'----req body')
       albumId = +albumId
       const createPhoto = await gallery.create({
         albumId, title, url, thumbnailUrl
